@@ -1,4 +1,7 @@
 import React,{useState} from 'react'
+import {Bar} from 'react-chartjs-2';
+ 
+import Chart from 'chart.js/auto'
 import {Paper,Typography,Link,Container, MenuItem,Box,Select,FormControl,Button} from "@mui/material"
 import { makeStyles } from '@mui/styles';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -19,6 +22,20 @@ const useStyles = makeStyles(theme=>({
  
 
 ))
+const state = {
+  labels: [5,10,15,20,25,30],
+  datasets: [
+    {
+      label: 'Rally Length',
+      backgroundColor: 'rgba(75,192,192,1)',
+      borderColor: 'rgba(0,0,0,1)',
+      
+      borderWidth: 2,
+      data: [45,57,53,27,25],
+      backgroundColor: ["#21294C", "#38B75B", "#21294C", "#21294C", "#21294C", "#21294C"]
+    }
+  ]
+}
 const Name=[
   {
     id:1,
@@ -63,7 +80,7 @@ const  Analyse = () => {
   
   return (
    <>
-        <Paper sx={{height:60,width:1,display:'flex',alignItems:'center',justifyContent:'center',flexWrap:'wrap'}} elevation={3}> <ArrowForwardIosIcon fontSize="inherit"/> <Typography variant='h4'>Analyse by Rally Length</Typography></Paper>
+        <Paper sx={{height:60,width:1,display:'flex',alignItems:'center',justifyContent:'center',flexWrap:'wrap'}} elevation={3}>  <Typography variant='h4'>Analyse by Rally Length</Typography></Paper>
        
 
         <Container maxWidth="sm"  >
@@ -115,10 +132,23 @@ const  Analyse = () => {
    <div className='d-flex flex-column mb-3'>
      <Typography  className='fs-5' sx={{my:1}}> <span className='fw-bold'>Lokesh</span> <span className='text-secondary'>v/s</span> <span className='text-secondary'>guru</span></Typography>
      <Typography className='fs-5'>Olympics Tokyo</Typography>
-    <div className='d-flex flex-column justify-content-center align-items-center'>
-    <img src=" https://matchday.ai/static/media/Smash.fc6ce67b.svg" alt="reloading" height={100} width={250}/>
-        <img src="https://matchday.ai/static/media/Straight.e162780b.svg" alt="reloding" height={60} width={200}/>
-    </div>
+     <div className='d-flex  ' >
+<Bar
+  
+  data={state}
+  options={{
+    title:{
+      display:true,
+      text:'Average Rainfall per month',
+      fontSize:20
+    },
+    legend:{
+      display:true,
+      position:'right'
+    }
+  }}
+/>
+</div>
      
       
       </div>

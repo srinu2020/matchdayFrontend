@@ -14,7 +14,7 @@ function App() {
      <Route  exact path='/'  element={<Home/>}/>
      <Route path='/shot'  element={<Shottype/>}/>
      <Route path='/compare'  element={<Comparegame/>}/>
-     <Route path='/analysis'  element={<Analyse/>}/>
+     <Route path='/analyse'  element={<Analyse/>}/>
       </Routes>
     </div>
   );
