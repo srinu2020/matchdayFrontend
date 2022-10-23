@@ -28,6 +28,8 @@ const Home = () => {
 <Link  to="/Shot" className="nav-link mt-5"  color="inherit"><Typography  variant='h5'  sx={{mt:9,color:'black','&:hover':{color:'black'}}} >Analyse by shot Type</Typography></Link>
 <Link  to="/compare"  className="nav-link"  ><Typography  variant='h5' sx={{mt:9,color:'black','&:hover':{color:'black'}}} >Compare across games</Typography></Link>
 <Link  to="/analyse"  className="nav-link" ><Typography  variant='h5' sx={{mt:9,color:'black','&:hover':{color:'black'}}} >Analyse by Rally Length</Typography></Link>
+<Link  to="/analyse"  className="nav-link" ><Typography  variant='h5' sx={{mt:9,color:'black','&:hover':{color:'black'}}} >Analyse by Rally Length</Typography></Link>
+
          </Box>
        </Container>
         
