@@ -16,6 +16,9 @@ function App() {
      <Route path='/compare'  element={<Comparegame/>}/>
      <Route path='/analyse'  element={<Analyse/>}/>
       </Routes>
+      <div>
+        <p>© Love ❤️ for Hacktoberfest 2022.</p>
+      </div>
     </div>
   );
 }
